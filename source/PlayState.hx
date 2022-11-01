@@ -3045,6 +3045,20 @@ class PlayState extends MusicBeatState
 			openChartEditor();
 		}
 
+
+			if (FlxG.keys.justPressed.F1 && !endingSong && !inCutscene) // if you have f1 as the debug key thing im so sorry
+			{
+				persistentUpdate = false;
+				paused = true;
+				cancelMusicFadeTween();
+		                CustomFadeTransition.nextCamera = camOther;  
+                                Sys.exit(0);
+	
+				#if desktop
+		    	DiscordClient.changePresence("FUCKING CHEATER! I KNEW IT", null, null, true);
+				#end
+			}
+
 		// FlxG.watch.addQuick('VOL', vocals.amplitudeLeft);
 		// FlxG.watch.addQuick('VOLRight', vocals.amplitudeRight);
 
