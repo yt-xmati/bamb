@@ -25,8 +25,7 @@ class psstState extends FlxState
     public function jumpscare(bruh:FlxTimer = null)
     {
         sus.loadGraphic(Paths.image("dave/secret/attack", "shared"));
-        FlxG.sound.play(Paths.sound("screechAttack", "preload"), 1, false);
-        new FlxTimer().start(1.1, closeGame);
+        new FlxTimer().start(0.5, closeGame);
     }
     public function closeGame(time:FlxTimer = null)
     {
