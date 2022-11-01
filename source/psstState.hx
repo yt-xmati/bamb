@@ -15,18 +15,18 @@ class psstState extends FlxState
     override public function create()
     {
         super.create();
-        FlxG.sound.play(Paths.sound("psst", "preload"), 1, false);
         sus = new FlxSprite(0, 0);
         sus.loadGraphic(Paths.image("dave/secret/psst", "shared"));
+        FlxG.sound.play(Paths.sound("screechPsst", "preload"), 1, false);
         add(sus);
 
         new FlxTimer().start(4, jumpscare);
     }
     public function jumpscare(bruh:FlxTimer = null)
     {
-        sus.loadGraphic(Paths.image("dave/secret/lmao", "shared"));
-        FlxG.sound.play(Paths.sound("scarey", "preload"), 1, false);
-        new FlxTimer().start(0.5, closeGame);
+        sus.loadGraphic(Paths.image("dave/secret/attack", "shared"));
+        FlxG.sound.play(Paths.sound("screechAttack", "preload"), 1, false);
+        new FlxTimer().start(1.1, closeGame);
     }
     public function closeGame(time:FlxTimer = null)
     {
