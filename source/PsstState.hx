@@ -4,7 +4,7 @@ import flixel.*;
 import flixel.util.FlxTimer;
 import flash.system.System;
 
-class psstState extends FlxState
+class PsstState extends FlxState
 {
     var sus:FlxSprite;
 
