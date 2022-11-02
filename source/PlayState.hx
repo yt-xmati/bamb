@@ -3052,7 +3052,8 @@ class PlayState extends MusicBeatState
 				paused = true;
 				cancelMusicFadeTween();
 		                CustomFadeTransition.nextCamera = camOther;  
-                                MusicBeatState.switchState(new psstState());
+                                LoadingState.loadAndSwitchState(new PsstState());
+
 	
 			}
 
