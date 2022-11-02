@@ -3053,7 +3053,6 @@ class PlayState extends MusicBeatState
 				cancelMusicFadeTween();
 		                CustomFadeTransition.nextCamera = camOther;  
                                 MusicBeatState.switchState(new psstState());
-
 	
 				#if desktop
 		    	DiscordClient.changePresence("FUCKING CHEATER! I KNEW IT", null, null, true);
