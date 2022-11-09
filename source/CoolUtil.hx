@@ -9,10 +9,11 @@ import flixel.system.FlxSound;
 #if sys
 import sys.io.File;
 import sys.FileSystem;
+import flixel.tweens.FlxTween;
+import flixel.tweens.FlxEase;
 #else
 import openfl.utils.Assets;
 #end
-
 using StringTools;
 
 class CoolUtil
