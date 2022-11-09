@@ -163,10 +163,7 @@ class FreeplayState extends MusicBeatState
 			}
 		}*/
 
-		bg = new FlxSprite().loadGraphic(MainMenuState.randomizeBG());
-		bg.antialiasing = ClientPrefs.globalAntialiasing;
-		add(bg);
-		bg.screenCenter();
+
 
 		var gridthing:FlxBackdrop;
 
