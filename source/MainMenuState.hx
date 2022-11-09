@@ -172,9 +172,10 @@ class MainMenuState extends MusicBeatState
 
 	var selectedSomethin:Bool = false;
 
-
+}
 		var lerpVal:Float = CoolUtil.boundTo(elapsed * 7.5, 0, 1);
 		camFollowPos.setPosition(FlxMath.lerp(camFollowPos.x, camFollow.x, lerpVal), FlxMath.lerp(camFollowPos.y, camFollow.y, lerpVal));
+{
 
 		if (!selectedSomethin)
 		{
