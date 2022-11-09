@@ -26,7 +26,6 @@ using StringTools;
 class MainMenuState extends MusicBeatState
 {
 	public static var psychEngineVersion:String = '0.6.3'; //This is also used for Discord RPC
-	public static var xmatiEngineVersion:String = '0.1 (MODIFIED PSYCH)'; //This is also used for Discord RPC
 	public static var curSelected:Int = 0;
 
 	var menuItems:FlxTypedGroup<FlxSprite>;
@@ -36,7 +35,7 @@ class MainMenuState extends MusicBeatState
 	var optionShit:Array<String> = [
 		'story_mode',
 		'freeplay',
-                'youtube',
+		'youtube',
 		'options'
 	];
 
@@ -128,6 +127,7 @@ class MainMenuState extends MusicBeatState
 
 		FlxG.camera.follow(camFollowPos, null, 1);
 
+
 		var versionShit:FlxText = new FlxText(12, FlxG.height - 64, 44, "xmati engine v" + xmatiEngineVersion, 12);
 		versionShit.scrollFactor.set();
 		versionShit.setFormat("Comic Sans MS Bold", 16, FlxColor.WHITE, LEFT, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
@@ -177,11 +177,11 @@ class MainMenuState extends MusicBeatState
 		if (FlxG.sound.music.volume < 0.8)
 		{
 			FlxG.sound.music.volume += 0.5 * FlxG.elapsed;
+			if(FreeplayState.vocals != null) FreeplayState.vocals.volume += 0.5 * elapsed;
 		}
 
 		var lerpVal:Float = CoolUtil.boundTo(elapsed * 7.5, 0, 1);
 		camFollowPos.setPosition(FlxMath.lerp(camFollowPos.x, camFollow.x, lerpVal), FlxMath.lerp(camFollowPos.y, camFollow.y, lerpVal));
-
 
 		if (!selectedSomethin)
 		{
@@ -206,9 +206,9 @@ class MainMenuState extends MusicBeatState
 
 			if (controls.ACCEPT)
 			{
-				if (optionShit[curSelected] == 'youtube')
+				if (optionShit[curSelected] == 'donate')
 				{
-					CoolUtil.browserLoad('https://www.youtube.com/channel/UCnDaqcfVnYu9qZxkxeeYkrQ');
+					CoolUtil.browserLoad('https://ninja-muffin24.itch.io/funkin');
 				}
 				else
 				{
@@ -256,7 +256,8 @@ class MainMenuState extends MusicBeatState
 			#if desktop
 			else if (FlxG.keys.anyJustPressed(debugKeys))
 			{
-                    PlayState.SONG = Song.loadFromJson("exploitation", "exploitation");
+				selectedSomethin = true;
+				MusicBeatState.switchState(new MasterEditorMenu());
 			}
 			#end
 		}
