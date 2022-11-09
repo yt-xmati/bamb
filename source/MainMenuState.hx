@@ -25,7 +25,8 @@ using StringTools;
 
 class MainMenuState extends MusicBeatState
 {
-	public static var psychEngineVersion:String = '0.6.3'; //This is also used for Discord RPC
+	public static var psychEngineVersion:String = '0.6.3'; 
+	public static var xmatiEngineVersion:String = '0.1.1'; 
 	public static var curSelected:Int = 0;
 
 	var menuItems:FlxTypedGroup<FlxSprite>;
@@ -206,9 +207,9 @@ class MainMenuState extends MusicBeatState
 
 			if (controls.ACCEPT)
 			{
-				if (optionShit[curSelected] == 'donate')
+				if (optionShit[curSelected] == 'youtube')
 				{
-					CoolUtil.browserLoad('https://ninja-muffin24.itch.io/funkin');
+					CoolUtil.browserLoad('https://www.youtube.com/c/xmati1/featured');
 				}
 				else
 				{
@@ -239,14 +240,19 @@ class MainMenuState extends MusicBeatState
 								{
 									case 'story_mode':
 										MusicBeatState.switchState(new StoryMenuState());
+										   	CoolUtil.cameraZoom(camera, 2, 1, FlxEase.backOut, ONESHOT);
 									case 'freeplay':
 										MusicBeatState.switchState(new FreeplayState());
+										   	CoolUtil.cameraZoom(camera, 2, 1, FlxEase.backOut, ONESHOT);
 									case 'awards':
 										MusicBeatState.switchState(new AchievementsMenuState());
+										   	CoolUtil.cameraZoom(camera, 2, 1, FlxEase.backOut, ONESHOT);
 									case 'credits':
 										MusicBeatState.switchState(new CreditsState());
+										   	CoolUtil.cameraZoom(camera, 2, 1, FlxEase.backOut, ONESHOT);
 									case 'options':
 										LoadingState.loadAndSwitchState(new options.OptionsState());
+										   	CoolUtil.cameraZoom(camera, 2, 1, FlxEase.backOut, ONESHOT);
 								}
 							});
 						}
@@ -257,6 +263,7 @@ class MainMenuState extends MusicBeatState
 			else if (FlxG.keys.anyJustPressed(debugKeys))
 			{
 				selectedSomethin = true;
+				CoolUtil.cameraZoom(camera, 2, 1, FlxEase.backOut, ONESHOT);
 				MusicBeatState.switchState(new MasterEditorMenu());
 			}
 			#end
