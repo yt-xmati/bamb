@@ -35,12 +35,7 @@ class FreeplaySelectState extends MusicBeatState
     {
         CoolUtil.cameraZoom(camera, 1, .5, FlxEase.sineOut, ONESHOT);
 
-        BG = new FlxSprite().loadGraphic(MainMenuState.randomizeBG());
-        BG.updateHitbox();
-        BG.screenCenter();
-        //BG.color = 0x55D650;
-        add(BG);
-
+// fuck this randomized bg line!!
         var gridthing:FlxBackdrop;
 
 		gridthing = new FlxBackdrop(Paths.image('checkeredBG'), 0.2, 0, true, true);
