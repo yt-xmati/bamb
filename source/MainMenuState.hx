@@ -253,6 +253,9 @@ class MainMenuState extends MusicBeatState
 									case 'options':
 										LoadingState.loadAndSwitchState(new options.OptionsState());
 										   	CoolUtil.cameraZoom(camera, 2, 1, FlxEase.backOut, ONESHOT);
+									case 'mods':
+										MusicBeatState.switchState(new ModsMenuState());
+										   	CoolUtil.cameraZoom(camera, 2, 1, FlxEase.backOut, ONESHOT);
 								}
 							});
 						}
