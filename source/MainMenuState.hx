@@ -96,7 +96,7 @@ class MainMenuState extends MusicBeatState
 		magenta.visible = false;
 		magenta.antialiasing = ClientPrefs.globalAntialiasing;
 		magenta.color = 0xFFfd719b;
-                magenta.shader = wiggleShit;
+                magenta.shader = flixel.system.FlxShader.wiggleShit;
 		add(magenta);
 		
 		// magenta.scrollFactor.set();
