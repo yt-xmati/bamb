@@ -44,7 +44,6 @@ class MainMenuState extends MusicBeatState
 	var camFollow:FlxObject;
 	var camFollowPos:FlxObject;
 	var debugKeys:Array<FlxKey>;
-	var wiggleShader:WiggleEffect.WiggleEffect;
 
 	override function create()
 	{
@@ -85,11 +84,6 @@ class MainMenuState extends MusicBeatState
 		camFollowPos = new FlxObject(0, 0, 1, 1);
 		add(camFollow);
 		add(camFollowPos);
-
-			wiggleShader = new WiggleEffect.WiggleEffect();
-			wiggleShader.waveAmplitude = 0.1;
-			wiggleShader.waveFrequency = 5;
-			wiggleShader.waveSpeed = 2.25;
 			
 
 		magenta = new FlxSprite(-80).loadGraphic(Paths.image('menuDesat'));
@@ -100,7 +94,6 @@ class MainMenuState extends MusicBeatState
 		magenta.visible = false;
 		magenta.antialiasing = ClientPrefs.globalAntialiasing;
 		magenta.color = 0xFFfd719b;
-		magenta.shader = wiggleShader.shader;
 		add(magenta);
 		
 		// magenta.scrollFactor.set();
