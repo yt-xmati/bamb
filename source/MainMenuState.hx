@@ -4,7 +4,6 @@ package;
 import Discord.DiscordClient;
 #end
 import flixel.FlxG;
-import WiggleEffect.WiggleEffectType; //if i get an error about this i'll remove it
 import flixel.FlxObject;
 import flixel.FlxSprite;
 import flixel.FlxCamera;
@@ -17,7 +16,6 @@ import flixel.math.FlxMath;
 import flixel.tweens.FlxEase;
 import flixel.tweens.FlxTween;
 import flixel.util.FlxColor;
-import flixel.system.FlxShader;
 import lime.app.Application;
 import Achievements;
 import editors.MasterEditorMenu;
@@ -46,7 +44,6 @@ class MainMenuState extends MusicBeatState
 	var camFollow:FlxObject;
 	var camFollowPos:FlxObject;
 	var debugKeys:Array<FlxKey>;
-	var wiggleShit:WiggleEffect = new WiggleEffect();
 
 	override function create()
 	{
@@ -97,7 +94,6 @@ class MainMenuState extends MusicBeatState
 		magenta.visible = false;
 		magenta.antialiasing = ClientPrefs.globalAntialiasing;
 		magenta.color = 0xFFfd719b;
-                magenta.shader = wiggleShit;
 		add(magenta);
 		
 		// magenta.scrollFactor.set();
