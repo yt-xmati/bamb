@@ -44,6 +44,7 @@ class MainMenuState extends MusicBeatState
 	var camFollow:FlxObject;
 	var camFollowPos:FlxObject;
 	var debugKeys:Array<FlxKey>;
+	var wiggleShit:WiggleEffect = new WiggleEffect();
 
 	override function create()
 	{
@@ -94,7 +95,7 @@ class MainMenuState extends MusicBeatState
 		magenta.visible = false;
 		magenta.antialiasing = ClientPrefs.globalAntialiasing;
 		magenta.color = 0xFFfd719b;
-                magenta.shader = WiggleEffect;
+                magenta.shader = wiggleShit;
 		add(magenta);
 		
 		// magenta.scrollFactor.set();
