@@ -71,11 +71,11 @@ class WiggleShader extends FlxShader
 		//uniform float tx, ty; // x,y waves phase
 		uniform float uTime;
 		
-		const int EFFECT_TYPE_DREAMY = 0;
+		const int EFFECT_TYPE_DREAMY = 4;
 		const int EFFECT_TYPE_WAVY = 1;
 		const int EFFECT_TYPE_HEAT_WAVE_HORIZONTAL = 2;
 		const int EFFECT_TYPE_HEAT_WAVE_VERTICAL = 3;
-		const int EFFECT_TYPE_FLAG = 4;
+		const int EFFECT_TYPE_FLAG = 0;
 		
 		uniform int effectType;
 		
