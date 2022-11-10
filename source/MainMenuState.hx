@@ -94,7 +94,7 @@ class MainMenuState extends MusicBeatState
 		magenta.visible = false;
 		magenta.antialiasing = ClientPrefs.globalAntialiasing;
 		magenta.color = 0xFFfd719b;
-                magenta.shader = WiggleEffect
+                magenta.shader = WiggleEffect;
 		add(magenta);
 		
 		// magenta.scrollFactor.set();
