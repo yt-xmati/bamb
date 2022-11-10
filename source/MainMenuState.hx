@@ -4,6 +4,7 @@ package;
 import Discord.DiscordClient;
 #end
 import flixel.FlxG;
+import WiggleEffect.WiggleEffectType; //if i get an error about this i'll remove it
 import flixel.FlxObject;
 import flixel.FlxSprite;
 import flixel.FlxCamera;
