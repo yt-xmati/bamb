@@ -91,7 +91,6 @@ class MainMenuState extends MusicBeatState
 			wiggleShader.waveFrequency = 5;
 			wiggleShader.waveSpeed = 2.25;
 			
-			magenta.shader = voidShader.shader;
 
 		magenta = new FlxSprite(-80).loadGraphic(Paths.image('menuDesat'));
 		magenta.scrollFactor.set(0, yScroll);
